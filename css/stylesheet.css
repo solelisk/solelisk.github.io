@@ -1,0 +1,123 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: Casual;
+    color: #400F13;
+}
+
+header{
+    background-color: antiquewhite;
+    margin-left:0px;
+    margin-right: 0px;
+    -ms-grid-column-span: 12;
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    justify-content: center;
+
+}
+
+nav a{
+    display: flex;
+}
+
+a h1:hover{
+    color: rgb(249, 30, 176);
+}
+
+a h1:visited{
+    color: black;
+}
+
+main{
+   color: blue; 
+}
+
+footer{
+    width: 88rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selected{
+    color: blueviolet;
+}
+
+#tagline{
+    background-color: #400F13;
+    color: antiquewhite;
+}
+
+#logos{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+.projects{
+    background-color:antiquewhite;
+}
+
+section{
+    grid-template-columns: 12, 1fr;
+    grid-column-gap: 25px;
+    grid-auto-flow: dense;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    width: 1430px;
+    height: 6400px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+
+.grid-item {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #333;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+.flex-item {
+    background-color: #e74c3c;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.spanning-item {
+    background-color: #27ae60; /* Set the background color as desired */
+    grid-column: 2 / 12; /* Span from column 2 to column 11 */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #333;
+    height: 100%;
+}
+
+
+
+
+
+
