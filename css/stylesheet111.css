@@ -6,9 +6,12 @@ nav{
     background-color: pink;
     display: flex;
     align-items: center;
-    margin: auto;
+    margin-top: 0;
+    margin-left: 0;
     padding: 0;
     margin: 0;
+    border: #000 solid 1px;
+    
 }
 
 nav a{
@@ -31,7 +34,7 @@ a h1:hover{
     color: antiquewhite;
 }
 
-.selected{
+nav .selected{
     color: blue;
 }
 
@@ -40,6 +43,10 @@ body{
 }
 
 #tagline{
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-auto-flow: dense;
     font-size: 50px;
     align-items: center;
     margin: 15rem;
@@ -49,6 +56,7 @@ body{
 
 #tagline h2{
     align-items: center;
+    margin: auto;
 }
 
 section{
@@ -56,7 +64,6 @@ section{
     grid-template-columns:repeat(12, 1fr);
     grid-column-gap: 1.5rem;
     grid-auto-flow: dense;
-    margin:auto
 }
 
 section h3{
@@ -69,68 +76,69 @@ section h3{
 
 }
 
-.project{
-    position: relative;
-    text-align: center;
-    flex-basis: 1;
-    flex-grow: 0;
-    flex-shrink: 1;
-    width: 30%;
-    margin: 1%
-}
-
-.thumb{
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 1%;
-    text-align: center;
-    flex-basis: 1;
-    flex-grow: 0;
-    flex-shrink: 1;
-}
-
-.overlay{
-    position:absolute;
+img:hover{
+    opacity: 1;
+    border: 1px dotted;
+    border-radius: 4.625rem;
     top:0;
     bottom:0;
     left: 0;
     right: 0;
     z-index: 5;
-    height: 100%;
-    width:100%
+    scale: 1.1;
     transition:.15s ease;
-    opacity: 0;
-    transition: .15s ease;
     background-color: pink;
 }
 
-.text{
-    color: brown;
-    font-size: 40px;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    z-index: 5;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform:translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+#proj_img1{
+    float: left;
+    width: 33.33%;
+    padding:2rem;
+    grid-column:1/6;
 }
 
-.project:hover .overlay{
-    opacity: 1;
-    border: 1px dotted;
-    border-radius: 4.625rem;
+#proj_img1 img{
+    height: 40rem;
+    grid-column:1/6;
 }
 
-.project{
-    grid-column: span 12;
+#title{
+    margin-top: 20rem;
+    margin-left: 70rem;
+    margin-right: 20rem;
+    color: bisque;
 }
 
-#projdesc{
-    align-items: center;
-    grid-column: 7/12;
+#description h2{
+    text-decoration: none;
+    color: antiquewhite;
+    margin-left:55rem;
+    margin-top: 5rem ;
+    margin-right: 10rem;
+}
+
+#proj_img2{
+    float: right;
+    width: 33.33%;
+    padding:2rem;
+    grid-column:7/12;
+    height: 45rem;
+    margin-top: 30rem;
+}
+
+#description2 h2{
+    text-decoration: none;
+    color: antiquewhite;
+    margin-right:55rem;
+    margin-top: 5rem ;
+    margin-left: 10rem;
+}
+
+#title2{
+    margin-top: 40rem;
+    margin-left: 25rem;
+    margin-right: 55rem;
+    color: bisque;
 }
 
 footer{
@@ -207,7 +215,8 @@ button {
     border: none;
     font-size: 20px;
     font-family: 'Sarabun', sans-serif; padding: 8px 16px 8px 16px;
+}
 
-input:focus, textarea:focus {
+input:focus, textarea:focus{
     border: 2px solid darkred;
 }
